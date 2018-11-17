@@ -1,0 +1,56 @@
+
+
+#pnlHeader{
+    -fx-background-color: rgb(238, 238, 238);
+}
+#panelLeft{
+    -fx-background-color: rgb(238, 238, 238);
+}
+
+#panelBottom{
+    -fx-background-color: rgb(238, 238, 238);
+}
+
+
+#pnlTitle{
+    -fx-background-color: rgb(43, 120, 228);
+}
+
+#lblTitle{
+    -fx-text-fill: white;
+}
+#lblBottom{
+    -fx-text-fill: rgb(43, 120, 228);
+}
+
+#lblEsci{
+    -fx-background-color: rgb(183, 183, 183);
+}
+
+#lblEsci:hover{
+    -fx-background-color: rgb(43, 120, 228);
+    -fx-text-fill: white;
+}
+
+#lblMessage{
+    -fx-background-color: rgb(6, 128, 28);
+    -fx-text-fill: white;
+}
+
+#lblScarica{
+    -fx-background-color: rgb(183, 183, 183);
+}
+
+#lblScarica:hover{
+    -fx-background-color: rgb(43, 120, 228);
+    -fx-text-fill: white;
+}
+
+#lblEsegui{
+    -fx-background-color: rgb(183, 183, 183);
+}
+
+#lblEsegui:hover{
+    -fx-background-color: rgb(43, 120, 228);
+    -fx-text-fill: white;
+}
