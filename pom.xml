@@ -25,6 +25,11 @@
             <version>3.6</version>
         </dependency>
         <dependency>
+            <groupId>org.apache.commons.configuration</groupId>
+            <artifactId>commons-configuration</artifactId>
+            <version>1.10</version>
+        </dependency>
+        <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
             <version>2.1</version>
@@ -44,16 +49,16 @@
                 <version>2.3.1</version>
                 <executions>
                     <execution>
-                        <id>install-commons-net</id>
+                        <id>install-commons-configuration</id>
                         <phase>validate</phase>
                         <goals>
                             <goal>install-file</goal>
                         </goals>
                         <configuration>
-                            <file>${project.basedir}/lib/commons-net-3.6.jar</file>
-                            <groupId>org.apache.commons.net</groupId>
-                            <artifactId>commons-net</artifactId>
-                            <version>3.6</version>
+                            <file>${project.basedir}/lib/commons-configuration-1.10.jar</file>
+                            <groupId>org.apache.commons.configuration</groupId>
+                            <artifactId>commons-configuration</artifactId>
+                            <version>1.10</version>
                             <packaging>jar</packaging>
                             <generatePom>true</generatePom>
                         </configuration>
@@ -127,7 +132,7 @@
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
                             <mainClass>
-                                com.klugesoftware.FarmaManagerUpdating.main.FarmaManagerUpdatingMain
+                                com.klugesoftware.FarmaManagerUpdating.main.UpdaterMain
                             </mainClass>
                         </manifest>
                     </archive>

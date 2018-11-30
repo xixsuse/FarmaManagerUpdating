@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
+<?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
@@ -55,7 +55,10 @@
             </Pane>
             <AnchorPane prefHeight="258.0" prefWidth="600.0">
                <children>
-                  <TextArea fx:id="txtEsegui" disable="true" editable="false" layoutX="44.0" layoutY="102.0" prefHeight="55.0" prefWidth="158.0" text="&#10;" wrapText="true" AnchorPane.bottomAnchor="101.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="398.0" AnchorPane.topAnchor="102.0" />
+                  <TextArea fx:id="txtEsegui" disable="true" editable="false" layoutX="44.0" layoutY="102.0" prefHeight="55.0" prefWidth="158.0" text="&#10;" wrapText="true" AnchorPane.bottomAnchor="101.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="398.0" AnchorPane.topAnchor="102.0">
+                     <font>
+                        <Font size="12.0" />
+                     </font></TextArea>
                   <Label fx:id="lblScarica" layoutX="40.0" layoutY="32.0" onMouseClicked="#scaricaClicked" prefHeight="52.0" prefWidth="161.0" text="Scarica" wrapText="true" AnchorPane.bottomAnchor="174.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="399.0" AnchorPane.topAnchor="32.0">
                      <graphic>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" smooth="false">
@@ -68,8 +71,8 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <ProgressIndicator layoutX="363.0" layoutY="20.0" prefHeight="77.0" prefWidth="143.0" progress="0.0" />
-                  <ListView layoutX="311.0" layoutY="109.0" prefHeight="112.0" prefWidth="268.0" />
+                  <ProgressIndicator fx:id="progressIndicator" layoutX="363.0" layoutY="20.0" prefHeight="77.0" prefWidth="143.0" progress="0.0" />
+                  <ListView fx:id="elencoMessaggi" layoutX="311.0" layoutY="109.0" prefHeight="112.0" prefWidth="268.0" />
                   <Label fx:id="lblEsegui" disable="true" layoutX="40.0" layoutY="179.0" onMouseClicked="#eseguiClicked" prefHeight="52.0" prefWidth="161.0" text="Esegui" wrapText="true">
                      <font>
                         <Font size="18.0" />

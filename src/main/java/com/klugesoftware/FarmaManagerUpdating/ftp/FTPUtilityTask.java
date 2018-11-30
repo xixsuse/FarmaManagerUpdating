@@ -1,7 +1,9 @@
 package com.klugesoftware.FarmaManagerUpdating.ftp;
 
 import javafx.concurrent.Task;
+import org.apache.commons.io.FileUtils;
 
+import java.io.File;
 import java.io.IOException;
 
 public class FTPUtilityTask extends Task {
@@ -41,11 +43,17 @@ public class FTPUtilityTask extends Task {
     @Override
     protected Object call() throws Exception {
         FTPConnector ftpConnector = new FTPConnector();
+        updateMessage("Sto scaricando l'aggiornamento...");
+        File toSaveDir = new File(saveDir);
+        if(toSaveDir.exists() && toSaveDir.isDirectory())
+            FileUtils.deleteDirectory(toSaveDir);
         if(singleFile)
-            ftpConnector.downloadSingleFile(remoteFilePath,savePath);
+            ftpConnector.downLoadSingleFile(remoteFilePath,savePath);
 
         if(wholeDirectory)
-            ftpConnector.downloadDirectory(parentDir,currentDir,saveDir);
+            ftpConnector.downLoadDirectory(parentDir,currentDir,saveDir);
+
+        updateMessage("Operazione terminata");
 
         if(isCancelled()){
             updateMessage("Operazione annullata!");
